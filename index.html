@@ -175,65 +175,6 @@
       flex-shrink: 0;
     }
 
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.7rem;
-      animation: fade-up 0.95s 0.28s ease both;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.45rem;
-      padding: 0.95rem 1.35rem;
-      font-family: var(--font);
-      font-size: 0.82rem;
-      font-weight: 800;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-decoration: none;
-      border: 2px solid transparent;
-      cursor: pointer;
-      transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-    }
-
-    .btn-red {
-      background: var(--teh-red);
-      color: var(--teh-white);
-      border-color: var(--teh-red);
-    }
-
-    .btn-red:hover {
-      background: var(--teh-red-hot);
-      border-color: var(--teh-red-hot);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--teh-white);
-      border-color: rgba(255, 255, 255, 0.45);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--teh-white);
-      transform: translateY(-2px);
-    }
-
-    .btn-dark {
-      background: var(--teh-black);
-      color: var(--teh-white);
-      border-color: var(--teh-black);
-    }
-
-    .btn-dark:hover {
-      background: var(--teh-black-soft);
-      border-color: var(--teh-black-soft);
-      transform: translateY(-2px);
-    }
-
     /* —— Red rule —— */
     .rule {
       height: 6px;
@@ -372,20 +313,10 @@
     }
 
     .notice {
-      display: grid;
-      gap: 1rem;
-      align-items: center;
       padding: clamp(1.4rem, 4vw, 2rem) clamp(1.2rem, 4vw, 2.5rem);
       background: var(--teh-white);
       border-top: 6px solid var(--teh-red);
       border-bottom: 1px solid var(--teh-line);
-    }
-
-    @media (min-width: 700px) {
-      .notice {
-        grid-template-columns: 1fr auto;
-        padding-inline: clamp(1.2rem, 4vw, 2.5rem);
-      }
     }
 
     .notice strong {
@@ -421,21 +352,7 @@
       color: rgba(255, 255, 255, 0.7);
       font-weight: 500;
       max-width: 40ch;
-      margin: 0 auto 1.4rem;
-    }
-
-    .plus {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 3.4rem;
-      height: 3.4rem;
-      background: var(--teh-red);
-      color: var(--teh-white);
-      font-size: 1.8rem;
-      font-weight: 900;
-      line-height: 1;
-      animation: plus-pulse 2.2s ease-in-out infinite;
+      margin: 0 auto;
     }
 
     footer {
@@ -471,11 +388,6 @@
       to { transform: translateX(-48px); }
     }
 
-    @keyframes plus-pulse {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(220, 19, 13, 0.45); }
-      50% { box-shadow: 0 0 0 14px rgba(220, 19, 13, 0); }
-    }
-
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
         animation: none !important;
@@ -485,7 +397,6 @@
 
     @media print {
       .topbar, .hero { break-inside: avoid; }
-      .btn { box-shadow: none; }
     }
   </style>
 </head>
@@ -511,11 +422,6 @@
         <div class="meta-chip"><span class="dot" aria-hidden="true"></span>7 августа · пятница</div>
         <div class="meta-chip"><span class="dot" aria-hidden="true"></span>12:00</div>
         <div class="meta-chip"><span class="dot" aria-hidden="true"></span>Наш офис</div>
-      </div>
-
-      <div class="cta-row">
-        <a class="btn btn-red" href="#rsvp">Я буду · в календарь</a>
-        <a class="btn btn-outline" href="#program">Программа</a>
       </div>
     </div>
 
@@ -565,15 +471,13 @@
     <div class="notice">
       <div>
         <strong>Важно</strong>
-        <p>Обучение — обязательная часть нашей работы. Запланируйте день в календаре прямо сейчас.</p>
+        <p>Обучение — обязательная часть нашей работы. Просим каждого запланировать этот день.</p>
       </div>
-      <a class="btn btn-dark" href="#rsvp">Поставить «+»</a>
     </div>
 
-    <div class="rsvp" id="rsvp">
-      <h2>Отпишитесь, что вы будете</h2>
-      <p>Плюсик или короткий комментарий — и день уже в календаре. Ждём всех 7 августа в 12:00.</p>
-      <div class="plus" aria-hidden="true">+</div>
+    <div class="rsvp">
+      <h2>Ждём вас</h2>
+      <p>7 августа в 12:00 в нашем офисе — обучение от TEH, практика и неформальная часть после.</p>
     </div>
 
     <div class="rule" aria-hidden="true"></div>
